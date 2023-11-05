@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #421212;
+    color: #333;
+}
+
+header {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 20px;
+}
+/* Estilos do número no header */
+p#numero{
+    color: white;
+    margin-right: 80px;
+    list-style: none;
+}
+
+.container{
+    max-width: 1400px;
+    padding: 3%;
+    margin: 0 auto;
+    box-shadow: 0 0.1rem 0.5rem #ff4a4a;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .logo{
+    font-size: 100px;
+    height: 70px;
+    display: flex;
+    margin-left: 20px;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+nav ul li a:hover{
+    background-color: #000000;
+}
+.dropdown-menu{
+    position: absolute;
+    display: none;
+}
+.dropdown-menu a{
+    margin-top: 12px;
+    display: block;
+    color: #ff5757;
+    
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+    z-index: 1;
+}
+.dropdown-menu2{
+    display: none;
+    position: absolute;
+}
+
+.dropdown:hover .dropdown-menu2{
+    display: none;
+    display: block;
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 80px;
+    z-index: 1;
+
+}
+.menu {
+    cursor: pointer;
+}
+
+.menu .bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: #ff0000;
+    margin: 5px;
+    transition: 5.0s;
+}
+
+.menu .bar:nth-child(1), .menu .bar:nth-child(3) {
+    background: red;
+}
+
+
+
+.slider {
+    margin: 40px auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+.slide img{
+    width: 800px;
+}
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 2px solid #ff5757;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1.0s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.manual-btn:hover{
+    background-color: #fff;
+}
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+.navigation-auto div{
+    border: 2px solid #421212;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #fff;    
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #fff;    
+}
+
+#content {
+    text-align: center;
+    margin-left: 50px;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+}
+.teste{
+    display: flex;
+    text-align: center;
+}
+
+.box {
+    text-align: center;
+    border:1px solid #ccc;
+    padding: 15px 35px;
+    margin: 0px;
+    margin-top: 15px;
+}
+.final{
+    margin-right: 40px;
+    height: auto;
+    width: 200px;
+    display: flex;
+   
+}
+.final .box img {
+    width: 170px; 
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-decoration: none;
+
+}
+div#rodape{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    text-decoration: none;
+}
+#rodape a{
+    align-items: flex-end;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    justify-content: space-between;
+}
+
+
+
+
+@media screen and (max-width: 785px) {
+    body {
+
+       font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
+       flex-direction: column;
+    }
+ 
+    .container {
+        padding: 18px 20px;
+        max-width: 960px; /* Ou outro valor apropriado para o conteúdo da sua página */
+        margin: 0 auto; /* Centraliza a container */
+    }
+    .menu{
+        display: block;
+    }
+    .slider{
+        padding: 100px 2%;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        gap: 5rem;
+    }
+    .content{
+        padding: 100px 2%;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        gap: 5rem;
+    }
+    .final{     
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        gap: 5rem;
+        width: 100%;
+    }
+   footer{
+        width: 100%; /* Ocupa a largura total da tela */
+        padding: 10px; /* Adicione preenchimento conforme necessário */
+    }
+}
